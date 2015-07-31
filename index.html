@@ -92,7 +92,7 @@
         query.descending("createdAt");
         query.find({
             success: function(response){
-                document.getElementById('User Count').innerHTML=response.length + " Users";
+                document.getElementById('User Count').innerHTML=response.length + " Users signed up.";
                 var output="<ul>";
 
                 for (var i = 0; i < response.length; i++) { 
