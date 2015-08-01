@@ -1,115 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
 <head>
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <!-- Meta-Information -->
+    <!-- etc… -->
 
-    <title>Honours Project</title>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/0.10.0/angular-material.min.css">
 
-    <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Our Website CSS Styles -->
+    <link rel="stylesheet" href="css/main.css">
 
-    <!-- Parse CDN -->
-    <script src="http://www.parsecdn.com/js/parse-1.3.5.min.js"></script>
+</head>
+<body>
+<!--[if lt IE 7]>
+<!-- etc… -->
+<![endif]-->
 
-    <!-- Custom CSS -->
-    <style>
-    body {
-        padding-top: 70px;
-        /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
-    }
-    </style>
+<span class="highlight"><!-- Our Website Content Goes Here --></span>
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-        <![endif]-->
-
-    </head>
-
-    <body>
-
-        <!-- Navigation -->
-        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-            <div class="container">
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="#">Honours Project</a>
-                </div>
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav">
-                        <li>
-                            <a href="#">Users</a>
-                        </li>
-                        <li>
-                            <a href="#">Map</a>
-                        </li>
-                        <li>
-                            <a href="#">Posts</a>
-                        </li>
-                    </ul>
-                </div>
-                <!-- /.navbar-collapse -->
-            </div>
-            <!-- /.container -->
-        </nav>
-
-        <!-- Page Content -->
-        <div class="container">
-
-            <h2 id="User Count"></h2>
-            <p id="user"></p>
-
-        </div>
-        <!-- /.container -->
-
-        <!-- jQuery Version 1.11.1 -->
-        <script src="js/jquery.js"></script>
-
-        <!-- Bootstrap Core JavaScript -->
-        <script src="js/bootstrap.min.js"></script>
-
-        <script type="text/javascript">
-
-        Parse.initialize("nFHu3bnj37q5vzWkItvJutUFOPMLwjC1HbiiAXiC", "aglDt84BS2aquYjLb2E14AHumLw9BvlDm4uAQ59f");
-
-        var users = Parse.Object.extend("User");
-        var query = new Parse.Query(users);
-        query.descending("createdAt");
-        query.find({
-            success: function(response){
-                document.getElementById('User Count').innerHTML=response.length + " Users signed up.";
-                var output="<ul>";
-
-                for (var i = 0; i < response.length; i++) { 
-                    output+="<li>" + response[i].get("username") +"</li>";
-                }
-                output+="</ul>";
-                document.getElementById('user').innerHTML=output;
-
-            },
-            error: function(object, error) {
-              alert(error);
-          }
-      });
+<!-- Vendor: Javascripts -->
+<!-- Angular Material Dependencies -->
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-animate.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-aria.min.js"></script>
 
 
-        </script>
+<!-- Angular Material Javascript now available via Google CDN; version 0.10 used here -->
+<script src="https://ajax.googleapis.com/ajax/libs/angular_material/0.10.0/angular-material.min.js"></script>
 
-    </body>
+<!-- Our Website Javascripts -->
+<script src="js/main.js"></script>
 
-    </html>
+</body>
+</html>
