@@ -23,7 +23,12 @@
 <!-- etc… -->
 <![endif]-->
 
-<span class="highlight"><!-- Our Website Content Goes Here --></span>
+<span class="highlight">
+    <div ng-app="">
+        <p>Name : <input type="text" ng-model="name"></p>
+        <h1>Hello {{name}}</h1>
+    </div>
+</span>
 
 <!-- Vendor: Javascripts -->
 <!-- Angular Material Dependencies -->
