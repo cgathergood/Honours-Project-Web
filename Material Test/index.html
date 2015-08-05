@@ -38,23 +38,26 @@
                 </md-tab>
             </md-tabs>
         </md-content>
-            <div class="lock-size" layout="row" layout-align="center center">
-                <md-fab-speed-dial md-open="demo.isOpen" md-direction="up">
+            <div class="lock-size" layout="row">
+                <md-fab-speed-dial md-open="demo.isOpen" md-direction="up" ng-class="md-scale"  class="myFAB">
                     <md-fab-trigger>
-                        <md-button aria-label="menu" class="md-fab md-warn">
+                        <md-button class="md-fab md-warn">
                             <span class="ion-navicon icon-large"></span>
+                            <md-tooltip md-direction="left">More</md-tooltip>
                         </md-button>
                     </md-fab-trigger>
                     <md-fab-actions>
-                        <md-button aria-label="twitter" class="md-fab md-raised md-mini">
+                        <md-button class="md-fab md-raised md-mini">
                             <span class="ion-social-twitter icon-large"></span>
-                            <md-tooltip>twitter</md-tooltip>
+                            <md-tooltip md-direction="left">twitter</md-tooltip>
                         </md-button>
-                        <md-button aria-label="facebook" class="md-fab md-raised md-mini">
+                        <md-button class="md-fab md-raised md-mini">
                             <span class="ion-social-github icon-large"></span>
+                            <md-tooltip md-direction="left">Github</md-tooltip>
                         </md-button>
                         <md-button aria-label="Google hangout" class="md-fab md-raised md-mini">
                             <span class="ion-help icon-large"></span>
+                            <md-tooltip md-direction="left">About this project</md-tooltip>
                         </md-button>
                     </md-fab-actions>
                 </md-fab-speed-dial>
