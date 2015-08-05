@@ -1,7 +1,7 @@
 (function () {
     'use strict';
 
-    var app = angular.module('myApp', ['ngMaterial', 'ng-mfb']);
+    var app = angular.module('myApp', ['ngMaterial']);
 
     app.controller('AppCtrl', AppCtrl);
     function AppCtrl ( $scope ) {

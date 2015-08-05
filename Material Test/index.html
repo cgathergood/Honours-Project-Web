@@ -7,8 +7,7 @@
     <link rel="stylesheet" href="bower_components/angular-material/angular-material.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href='http://fonts.googleapis.com/css?family=RobotoDraft:300,400,500,700,400italic' rel='stylesheet' type='text/css'>
-    <link href="bower_components/ng-mfb/mfb/dist/mfb.min.css">
-    <link rel="stylesheet" href="bower_components/angularic-ionicon/angularic-ionicon.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="http://code.ionicframework.com/ionicons/1.5.2/css/ionicons.min.css" />
 </head>
 <body ng-app="myApp" ng-controller="AppCtrl" layout="column" layout-align="top center">
 
@@ -24,7 +23,7 @@
                 <md-tab label="Users">
                     <md-tab-body>
                         Users
-                        <icon="ion-edit"></icon>
+                        <span class="ion-chatbubble-working icon-large"></span>
                     </md-tab-body>
                 </md-tab>
                 <md-tab label="Photo">
@@ -38,13 +37,28 @@
                     </md-tab-body>
                 </md-tab>
             </md-tabs>
-
-            <nav mfb-menu position="br" effect="zoomin" label="hover here"
-                 active-icon="ion-edit" resting-icon="ion-plus-round"
-                 toggling-method="click">
-                <button mfb-button icon="paper-airplane" label="menu item"></button>
-            </nav>
         </md-content>
+            <div class="lock-size" layout="row" layout-align="center center">
+                <md-fab-speed-dial md-open="demo.isOpen" md-direction="up">
+                    <md-fab-trigger>
+                        <md-button aria-label="menu" class="md-fab md-warn">
+                            <span class="ion-navicon icon-large"></span>
+                        </md-button>
+                    </md-fab-trigger>
+                    <md-fab-actions>
+                        <md-button aria-label="twitter" class="md-fab md-raised md-mini">
+                            <span class="ion-social-twitter icon-large"></span>
+                            <md-tooltip>twitter</md-tooltip>
+                        </md-button>
+                        <md-button aria-label="facebook" class="md-fab md-raised md-mini">
+                            <span class="ion-social-github icon-large"></span>
+                        </md-button>
+                        <md-button aria-label="Google hangout" class="md-fab md-raised md-mini">
+                            <span class="ion-help icon-large"></span>
+                        </md-button>
+                    </md-fab-actions>
+                </md-fab-speed-dial>
+            </div>
 
     <script src="bower_components/angular/angular.min.js"></script>
     <script src="bower_components/angular-aria/angular-aria.min.js"></script>
@@ -52,7 +66,6 @@
     <script src="bower_components/hammerjs/hammer.min.js"></script>
     <script src="bower_components/angular-material/angular-material.min.js"></script>
     <script src="app.js"></script>
-    <script src="bower_components/ng-mfb/src/mfb-directive.js"></script>
 
 </body>
 </html>
