@@ -7,14 +7,44 @@
     <link rel="stylesheet" href="bower_components/angular-material/angular-material.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href='http://fonts.googleapis.com/css?family=RobotoDraft:300,400,500,700,400italic' rel='stylesheet' type='text/css'>
+    <link href="bower_components/ng-mfb/mfb/dist/mfb.min.css">
+    <link rel="stylesheet" href="bower_components/angularic-ionicon/angularic-ionicon.css">
 </head>
-<body ng-app="myApp" ng-controller="ListController" layout="column" layout-align="top center">
+<body ng-app="myApp" ng-controller="AppCtrl" layout="column" layout-align="top center">
 
     <md-toolbar>
         <div class="md-toolbar-tools md-whiteframe-z3">
-            <span class="md-flex">Angular Material Test App</span>
+            <span class="md-flex">Honours Project Calum Gathergood</span>
         </div>
     </md-toolbar>
+
+        <md-content class="md-padding">
+
+            <md-tabs>
+                <md-tab label="Users">
+                    <md-tab-body>
+                        Users
+                        <icon="ion-edit"></icon>
+                    </md-tab-body>
+                </md-tab>
+                <md-tab label="Photo">
+                    <md-tab-body>
+                        Photo
+                    </md-tab-body>
+                </md-tab>
+                <md-tab label="Map">
+                    <md-tab-body>
+                        Map
+                    </md-tab-body>
+                </md-tab>
+            </md-tabs>
+
+            <nav mfb-menu position="br" effect="zoomin" label="hover here"
+                 active-icon="ion-edit" resting-icon="ion-plus-round"
+                 toggling-method="click">
+                <button mfb-button icon="paper-airplane" label="menu item"></button>
+            </nav>
+        </md-content>
 
     <script src="bower_components/angular/angular.min.js"></script>
     <script src="bower_components/angular-aria/angular-aria.min.js"></script>
@@ -22,6 +52,7 @@
     <script src="bower_components/hammerjs/hammer.min.js"></script>
     <script src="bower_components/angular-material/angular-material.min.js"></script>
     <script src="app.js"></script>
+    <script src="bower_components/ng-mfb/src/mfb-directive.js"></script>
 
 </body>
 </html>
