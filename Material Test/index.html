@@ -9,7 +9,7 @@
     <link rel="stylesheet" href='http://fonts.googleapis.com/css?family=RobotoDraft:300,400,500,700,400italic' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" media="screen" href="http://code.ionicframework.com/ionicons/1.5.2/css/ionicons.min.css" />
 </head>
-<body ng-app="myApp" ng-controller="AppCtrl" layout="column" layout-align="top center">
+<body ng-app="HonoursApp" layout="column" layout-align="top center">
 
     <md-toolbar>
         <div class="md-toolbar-tools md-whiteframe-z3">
@@ -23,7 +23,6 @@
                 <md-tab label="Users">
                     <md-tab-body>
                         Users
-                        <span class="ion-chatbubble-working icon-large"></span>
                     </md-tab-body>
                 </md-tab>
                 <md-tab label="Photo">
@@ -39,7 +38,7 @@
             </md-tabs>
         </md-content>
             <div class="lock-size" layout="row">
-                <md-fab-speed-dial md-open="demo.isOpen" md-direction="up" ng-class="md-scale"  class="myFAB">
+                <md-fab-speed-dial md-direction="up" class="myFAB md-fling">
                     <md-fab-trigger>
                         <md-button class="md-fab md-warn">
                             <span class="ion-navicon icon-large"></span>
@@ -49,7 +48,7 @@
                     <md-fab-actions>
                         <md-button class="md-fab md-raised md-mini">
                             <span class="ion-social-twitter icon-large"></span>
-                            <md-tooltip md-direction="left">twitter</md-tooltip>
+                            <md-tooltip md-direction="left">@cgathergood</md-tooltip>
                         </md-button>
                         <md-button class="md-fab md-raised md-mini">
                             <span class="ion-social-github icon-large"></span>
