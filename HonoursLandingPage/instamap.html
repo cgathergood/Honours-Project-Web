@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>InstaMap - Calum Gathergood</title>
+
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+
+</head>
+
+<body onload="initialise()">
+  <div id="mainContainer" class="container-fluid">
+
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h1>InstaMap</h1>
+        <p class="lead">Upload photos and share them with friends wherever you are!</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <button id="down" class="btn btn-lg btn-success down">Take a look at all uploaded posts so far!</button>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <img src="img/device.png" id="deviceImage">
+      </div>
+    </div>
+
+    <div class="row" id="statsRow">
+      <div class="col-md-4 text-center">
+        <h1><span id="postStats">0</span> Posts</h1>
+      </div>
+      <div class="col-md-4 text-center">
+        <h1><span id="activeUsersCount">0</span> Active Users</h1>
+      </div>
+      <div class="col-md-4 text-center">
+        <h1><span id="totalUsersCount">0</span> Total Users</h1>
+      </div>
+    </div>
+
+    <div class="row text-center">
+      <div class="col-md-6 text-center">
+        <a href="https://github.com/cgathergood/Honours-Project-Android" target="_blank"><img src="img/googel-play-badge.png" class="storeImg"></a>
+      </div>
+      <div class="col-md-6 text-center">
+        <a href="https://github.com/cgathergood/Honours-Project-iOS" target="_blank"><img src="img/available-in-app-store-badge.png" class="storeImg"></a>
+      </div>
+    </div>
+
+  </div>
+  <div id="secondContainer" class="container-fluid">
+  </div>
+  <div id="map"></div>
+  <div id="bottom"></div>
+
+  <div id="infoButton"><button id="info" class="btn btn-success" data-toggle="modal" data-target="#infoModal">
+    <span class="glyphicon glyphicon-info-sign"></span>
+  </button></a></div>
+
+  <div class="modal fade" id="infoModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">About InstaMap</h4>
+        </div>
+        <div class="modal-body">
+          <p>InstaMap is a native mobile application built as part of my final year honours project. Both Android and iOS applications can be found on my <a href="https://github.com/cgathergood" target="_blank">Github profile</a>.</p>
+          <p>You can also take a look at my progress via my <a href="http://www.calumgathergood.com/blog/">blog</a>.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/jquery.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="http://www.parsecdn.com/js/parse-latest.js"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBkb2ZfRp7IyjQ0BjE2k3pQZyp4NuNnfXE&callback=initMap"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+
+</body>
+
+</html>

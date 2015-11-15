@@ -1,0 +1,77 @@
+    html, body {
+        height: 100%;
+        text-align: center;
+    }
+
+    #mainContainer {
+        color: white;
+        background-image: url("../img/background4.jpg");
+        width: 100%;
+        height: 800px;
+        background-size: cover;
+        background-position: center;
+        padding-top: 150px;
+        padding-bottom: 150px;
+    }
+
+    #secondContainer {
+        color: white;
+        background-image: url("../img/background1.jpg");
+        width: 100%;
+        height: 800px;
+        background-size: cover;
+        background-position: center;
+        padding-top: 150px;
+        padding-bottom: 150px;
+    }
+
+    #deviceImage {
+        width:30%;
+        height: auto;
+        padding-top: 20px;
+    }
+
+    #down {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .storeImg {
+     width: 40%;
+     height: auto;
+     border-radius: 18px;
+ }
+
+ #Android {
+    border-radius: 20px;
+}
+
+#map { 
+   height: 70%;
+   width: 100%;
+}
+
+.mapImage {
+    height: 70%;
+    width: 70%;
+}
+
+#bottom {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+#infoButton {
+    position:absolute;
+    top:5px;
+    right:5px;
+    margin:0;
+    padding:5px 3px;
+    text-decoration:none;
+}
+
+#statsRow {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
